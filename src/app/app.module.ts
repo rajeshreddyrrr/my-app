@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MatTableModule } from '@angular/material/table';
+import { provideHttpClient } from '@angular/common/http';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -10,9 +13,14 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatTableModule,
+    MatCheckboxModule
   ],
-  providers: [],
+  providers: [
+    provideHttpClient(),
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
